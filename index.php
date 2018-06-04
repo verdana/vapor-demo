@@ -6,7 +6,7 @@ $vapor->addFolder('views/layout');
 $vapor->addFolder('views/shared');
 $vapor->setExtension('php');
 
-require 'functions.php';
+require_once 'functions.php';
 
 echo $vapor->render('home', [
     'title'  => 'vapor template engine',
