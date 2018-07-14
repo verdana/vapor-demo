@@ -1,24 +1,11 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vapor Template Engine</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-</head>
+<?php $this->layout('layout/base'); ?>
 
-<body>
-    <?= $this->include('shared/header') ?>
+<?= $this->include('shared/header') ?>
 
-    <section>
-        <div class="container">
-            <?= $this->section('content') ?>
-        </div>
-    </section>
+<section>
+    <div class="container">
+        <?= $this->section('content') ?>
+    </div>
+</section>
 
-    <?= $this->include('shared/footer') ?>
-</body>
-
-</html>
+<?= $this->include('shared/footer') ?>

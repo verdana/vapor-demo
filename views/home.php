@@ -1,4 +1,4 @@
-<?php $this->layout('layout/main');?>
+<?php $this->layout('layout/main'); ?>
 
 <div class="row">
     <span class="intro">
