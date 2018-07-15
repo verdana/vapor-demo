@@ -1,6 +1,6 @@
-<?php $this->layout('layout/base'); ?>
+<?php $this->layout('layout::base', ['file' => 'layout/main.php']); ?>
 
-<?= $this->include('shared/header') ?>
+<?= $this->include('shared::header') ?>
 
 <section>
     <div class="container">
@@ -8,4 +8,4 @@
     </div>
 </section>
 
-<?= $this->include('shared/footer') ?>
+<?= $this->include('shared::footer') ?>

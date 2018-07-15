@@ -1,4 +1,4 @@
-<?php $this->layout('layout/main'); ?>
+<?php $this->layout('layout::main', ['file' => 'home.php']); ?>
 
 <div class="row">
     <span class="intro">
@@ -10,3 +10,10 @@
         <p>By now, Vapor is still under development, doesn't have yet its complete features.</p>
     </span>
 </div>
+
+<?php
+$this->include('shared::footer', [
+    'author' => 'Anadrev',
+    'email' => 'verdana.cn@gmail.com'
+]);
+?>
