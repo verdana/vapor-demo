@@ -1,11 +1,10 @@
 <?php $this->layout('layout::base', ['file' => 'layout/main.php']); ?>
 
-<?= $this->include('shared::header') ?>
 
+<?php $this->insert('shared::header') ?>
 <section>
     <div class="container">
         <?= $this->section('content') ?>
     </div>
 </section>
-
-<?= $this->include('shared::footer') ?>
+<?php $this->insert('shared::footer') ?>
