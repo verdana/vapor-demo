@@ -11,7 +11,6 @@
 
 <body>
 
-
     <?= $this->section('content') ?>
 
 </body>

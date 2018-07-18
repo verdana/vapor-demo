@@ -1,4 +1,4 @@
-<?php //$this->layout('layout::base', ['file' => 'layout/main.php']); ?>
+<?php $this->layout('layout::base', ['file' => 'layout/main.php']); ?>
 
 <?php //$this->insert('shared::header') ?>
 
