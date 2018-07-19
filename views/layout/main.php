@@ -1,4 +1,4 @@
-<?php $this->layout('layout::base') ?>
+<?php $this->layout('_layout::base') ?>
 
 <?php $this->insert('shared::header') ?>
 
