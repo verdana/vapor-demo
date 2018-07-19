@@ -8,5 +8,4 @@
     </div>
 </section>
 
-<?php $this->insert('shared::footer') ?>
-
+<?php $this->insert('shared::footer', ['msg' => 'insert shared::footer']) ?>

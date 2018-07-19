@@ -10,9 +10,3 @@
         <p>By now, Vapor is still under development, doesn't have yet it's complete features.</p>
     </span>
 </div>
-
-
-<pre>
-<?php var_dump(get_defined_vars()) ?>
-</pre>
-
