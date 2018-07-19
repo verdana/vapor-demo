@@ -1,4 +1,4 @@
-<?php $this->layout('layout::base', ['file' => 'layout/main.php']); ?>
+<?php $this->layout('layout::base') ?>
 
 <?php $this->insert('shared::header') ?>
 
@@ -8,4 +8,4 @@
     </div>
 </section>
 
-<?php $this->insert('shared::footer', ['msg' => 'insert shared::footer']) ?>
+<?php $this->insert('shared::footer') ?>

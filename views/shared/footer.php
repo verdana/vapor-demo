@@ -6,5 +6,3 @@
         <span class="info"><?= $this->e($github) ?></span>
     </div>
 </footer>
-
-<?= $msg ?>

@@ -1,4 +1,4 @@
-<?php $this->layout('layout::main', ['file' => 'layout/main.php']); ?>
+<?php $this->layout('layout::main') ?>
 
 <div class="row">
     <span class="intro">
@@ -10,3 +10,4 @@
         <p>By now, Vapor is still under development, doesn't have yet it's complete features.</p>
     </span>
 </div>
+
