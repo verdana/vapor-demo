@@ -1,0 +1,59 @@
+==8436== Memcheck, a memory error detector
+==8436== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==8436== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==8436== Command: /usr/local/bin/php -d extension=vapor.so index.php
+==8436== Parent PID: 8435
+==8436== 
+==8436== 
+==8436== HEAP SUMMARY:
+==8436==     in use at exit: 8,426 bytes in 25 blocks
+==8436==   total heap usage: 9,624 allocs, 9,599 frees, 1,983,362 bytes allocated
+==8436== 
+==8436== 1,088 bytes in 1 blocks are possibly lost in loss record 14 of 18
+==8436==    at 0x4C31D2F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8436==    by 0x47A5A3: __zend_realloc (zend_alloc.c:2845)
+==8436==    by 0x479955: _erealloc (zend_alloc.c:2459)
+==8436==    by 0x49E8D0: pass_two (zend_opcode.c:580)
+==8436==    by 0x458707: zend_compile (zend_language_scanner.l:606)
+==8436==    by 0x458828: compile_file (zend_language_scanner.l:635)
+==8436==    by 0x4B3199: zend_execute_scripts (zend.c:1490)
+==8436==    by 0x41E621: php_execute_script (main.c:2590)
+==8436==    by 0x5A31C4: do_cli (php_cli.c:1011)
+==8436==    by 0x5A42C2: main (php_cli.c:1404)
+==8436== 
+==8436== 1,448 (224 direct, 1,224 indirect) bytes in 1 blocks are definitely lost in loss record 16 of 18
+==8436==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8436==    by 0x47A500: __zend_malloc (zend_alloc.c:2829)
+==8436==    by 0x4797F8: _emalloc (zend_alloc.c:2429)
+==8436==    by 0x458634: zend_compile (zend_language_scanner.l:591)
+==8436==    by 0x458828: compile_file (zend_language_scanner.l:635)
+==8436==    by 0x4B3199: zend_execute_scripts (zend.c:1490)
+==8436==    by 0x41E621: php_execute_script (main.c:2590)
+==8436==    by 0x5A31C4: do_cli (php_cli.c:1011)
+==8436==    by 0x5A42C2: main (php_cli.c:1404)
+==8436== 
+==8436== 4,280 (152 direct, 4,128 indirect) bytes in 1 blocks are definitely lost in loss record 18 of 18
+==8436==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8436==    by 0x47A500: __zend_malloc (zend_alloc.c:2829)
+==8436==    by 0x4797F8: _emalloc (zend_alloc.c:2429)
+==8436==    by 0x4FE42F: zend_objects_new (zend_objects.c:161)
+==8436==    by 0x4DF708: zend_default_exception_new_ex (zend_exceptions.c:210)
+==8436==    by 0x4DF9BE: zend_default_exception_new (zend_exceptions.c:244)
+==8436==    by 0x4B92F5: _object_and_properties_init (zend_API.c:1332)
+==8436==    by 0x4B934A: _object_init_ex (zend_API.c:1340)
+==8436==    by 0x4E3283: zend_throw_exception (zend_exceptions.c:894)
+==8436==    by 0x4E3460: zend_throw_exception_ex (zend_exceptions.c:921)
+==8436==    by 0x5DED224: vapor_execute (vapor.c:251)
+==8436==    by 0x5DED3AB: vapor_run (vapor.c:286)
+==8436== 
+==8436== LEAK SUMMARY:
+==8436==    definitely lost: 376 bytes in 2 blocks
+==8436==    indirectly lost: 5,352 bytes in 17 blocks
+==8436==      possibly lost: 1,088 bytes in 1 blocks
+==8436==    still reachable: 1,610 bytes in 5 blocks
+==8436==         suppressed: 0 bytes in 0 blocks
+==8436== Reachable blocks (those to which a pointer was found) are not shown.
+==8436== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==8436== 
+==8436== For counts of detected and suppressed errors, rerun with: -v
+==8436== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
