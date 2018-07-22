@@ -13,7 +13,7 @@ echo $vapor->render('home', [
     'title'  => 'vapor template engine',
     'author' => 'verdana mu',
     'email'  => 'verdana.cn@gmail.com',
-    'github' => 'https: //github.com/verdana/vapor.git',
+    'github' => 'https://github.com/verdana/vapor.git',
 ]);
 
 $time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
