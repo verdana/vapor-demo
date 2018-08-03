@@ -1,9 +1,9 @@
 <?php
 declare (strict_types = 1);
 
-$vapor = new Vapor('views', 'php');
-$vapor->addFolder('layout', __DIR__ . '/views/layout');
-$vapor->addFolder('shared', __DIR__ . '/views/shared');
+$vapor = new Vapor('views');
+$vapor->addFolder('layout', 'views/layout');
+$vapor->addFolder('shared', 'views/shared');
 $vapor->setExtension('php');
 // $vapor->loadExtensions('functions.php');
 
