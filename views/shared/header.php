@@ -1,5 +1,5 @@
 <header>
     <div class="title">
-        <?= $this->ucwords($title) ?>
+        <?= $this->e($title) ?>
     </div>
 </header>
